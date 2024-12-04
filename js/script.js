@@ -33,22 +33,25 @@ feather.replace();
                 });
             });
 
+const searchOverlay = document.getElementById('searchOverlay');
 
-            const searchOverlay = document.getElementById('searchOverlay');
+const searchBar = document.querySelector('.search-bar');
 
-            document.addEventListener("click", function (e) {
-              if (!searchOverlay.contains(e.target) && !navbarNav.contains(e.target)) {
-                navbarNav.classList.remove("active");
-              }
-            });
-            
-            function toggleSearchOverlay() {
-                if (searchOverlay.style.display === 'flex') {
-                    searchOverlay.style.display = 'none';
-                } else {
-                    searchOverlay.style.display = 'flex';
-                }
-            }
-            
-            // Pastikan untuk memanggil fungsi ini saat ikon search ditekan
-            document.querySelector('.search-icon').addEventListener('click', toggleSearchOverlay);
+// Fungsi untuk membuka dan menutup overlay
+function toggleSearchOverlay() {
+    if (searchOverlay.style.display === 'flex') {
+        searchOverlay.style.display = 'none';
+    } else {
+        searchOverlay.style.display = 'flex';
+    }
+}
+
+// Event listener untuk ikon pencarian
+document.querySelector('.search-icon').addEventListener('click', toggleSearchOverlay);
+
+// Event listener untuk menutup overlay ketika mengklik di luar kotak pencarian
+document.addEventListener('click', function (e) {
+    if (searchOverlay.style.display === 'flex' && !searchBar.contains(e.target) && !e.target.closest('.search-icon')) {
+        searchOverlay.style.display = 'none';
+    }
+});
