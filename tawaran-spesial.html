@@ -1,329 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dewata Zen</title>
-        <!--START FAVICON-->
-        <link rel="icon" type="image/png" href="img/logo.png" />
-        <link rel="shortcut icon" type="image/png" href="img/logo.png" />
-        <!--END FAVICON-->
-        <!-- FONT-->    
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
-            rel="stylesheet"
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dewata Zen</title>
+    <!--START FAVICON-->
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+    <!--END FAVICON-->
+    <!-- FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
     />
 
-        <!-- Feather Icon -->
-        <script src="https://unpkg.com/feather-icons"></script>
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-        <!-- My style -->
-        <link rel="stylesheet" href="css/tawaranspesial.css" />
-    </head>
+    <!-- My style -->
+    <link rel="stylesheet" href="css/tawaranspesial.css" />
+  </head>
 
-    <body>
-        <!-- navbar start -->
-        <nav class="navbar">
-            <a href="#" class="navbar-logo">Dewata<span>Zen</span>.</a>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Dewata<span>Zen</span>.</a>
 
-            <div class="navbar-nav">
-                <a href="homepage.html">Beranda</a>
-                <a href="about.html">Tentang Kami</a>
-                <a href="#travel">Travel Blog</a>
-                <a href="tawaran-spesial.html">Tawaran Spesial</a>
-                <a href="#more">More</a>
-            </div>
+      <div class="navbar-nav">
+        <a href="homepage.html">Beranda</a>
+        <a href="about.html">Tentang Kami</a>
+        <a href="#travel">Travel Blog</a>
+        <a href="tawaran-spesial.html">Tawaran Spesial</a>
+        <a href="#more">More</a>
+      </div>
 
-            <div class="navbar-extra">
-                <a href="#" id="search-button"><i data-feather="search"></i></a>
-                <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
-            </div>
-        </nav>
-        <!-- Navbar end -->
-        
-        <!--OBJECT START-->
-        <section class="object">
-            <div class="persegi">
-                <h1> Temukan Penginapan ku</h1>
-                <p>Dapatkan penginapan ideal untuk liburan 
-                    Anda di Bali bersama Dewata Zen. 
-                    Mulai dari vila pantai hingga hotel 
-                    mewah, temukan tempat menginap sesuai 
-                    gaya dan kebutuhan Anda untuk pengalaman 
-                    yang nyaman dan berkesan!
-                </p>
-            </div>
-        </section>
-        <!--OBJECT END-->
-        <!--Filter Control-->
-        <nav class="button-filter">
-            <button class = "filter-btn " data-category="semua">Semua</button>
-            <button class = "filter-btn " data-category="penginapan">Penginapan</button>
-            <button class = "filter-btn " data-category="guide">Guide</button>
-            <button class = "filter-btn " data-category="paket">Paket Special</button>
-        </nav>
-        <!--FILTER CONTENT END-->
-        <!--CONTENT-->
-        <section class="content">
-            <div class="content-grid">
-                <div class="item penginapan" data-category="penginapan">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>Watermark Hotel and Spa Bali</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
 
-                <div class="item penginapan" data-category="penginapan">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>Watermark Hotel and Spa Bali</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item penginapan" data-category="penginapan">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>Watermark Hotel and Spa Bali</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item penginapan" data-category="penginapan">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>Watermark Hotel and Spa Bali</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item penginapan" data-category="penginapan">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>Watermark Hotel and Spa Bali</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item penginapan" data-category="penginapan">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>Watermark Hotel and Spa Bali</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item penginapan" data-category="penginapan">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>Watermark Hotel and Spa Bali</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item penginapan" data-category="penginapan">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>Watermark Hotel and Spa Bali</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item penginapan" data-category="penginapan">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>Watermark Hotel and Spa Bali</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-<!--GUIDE-->
-                <div class="item guide" data-category="guide">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>nnnnnn</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item guide" data-category="guide">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>nnnnnn</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item guide" data-category="guide">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>nnnnnn</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item guide" data-category="guide">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>nnnnnn</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item guide" data-category="guide">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>nnnnnn</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item guide" data-category="guide">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>nnnnnn</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item guide" data-category="guide">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>nnnnnn</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-<!--PAKET-->
-                <div class="item paket" data-category="paket">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>bbbbb</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item paket" data-category="paket">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>bbbbb</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item paket" data-category="paket">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>bbbbb</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item paket" data-category="paket">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>bbbbb</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item paket" data-category="paket">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>bbbbb</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item paket" data-category="paket">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>bbbbb</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item paket" data-category="paket">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>bbbbb</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item paket" data-category="paket">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>bbbbb</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item paket" data-category="paket">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>bbbbb</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-
-                <div class="item paket" data-category="paket">
-                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
-                    <h3>bbbbb</h3>
-                    <p>Jimbaran, Kuta Selatan</p>
-                    <p>Rp 919.542/malam</p>
-                    <button class="book-btn">Pesan</button>
-                </div>
-            </div>
-        </section>
-        
-        <!--CONTENT end -->
-
-        <!-- footer start -->
-        <footer class="footer"> 
-        <div class="logo"> 
-            <img src="img/logo.svg" alt="Logo"> 
-        </div> 
-        <div> 
-            <h3>About Us</h3> 
-            <p>Dewata Zen adalah platform wisata yang diciptakan untuk mempermudah wisatawan dalam menemukan dan memesan pengalaman terbaik di Bali. Mulai dari pilihan destinasi, pemesanan hotel, hingga layanan pemandu wisata, semua ada dalam satu platform.</p> 
-        </div> 
-        <div> 
-            <h3>Futher Link</h3> 
-            <p><a href="#">Syarat dan Ketentuan</a>
-            </p> <p><a href="#">Berita Terkini</a>
-            </p> 
-        </div> 
-        <div> 
-            <h3>Get In Touch</h3> 
-            <p> 
-                <a href="https://instagram.com/dewatazen">
-                <i data-feather="instagram"></i>dewatazen
-                </a>
-            </p> 
-            <p>
-                <a href="mailto:dewatazen@gmail.com">
-                <i data-feather="mail"></i>dewatazen@gmail.com
-                </a>
-            </p>
-        </div> 
-        </footer> 
-        <div class="copyright"> 
-            © 2024 Dewata Zen. All right reserved 
+    <!--OBJECT START-->
+    <section class="object">
+      <div class="persegi">
+        <h1>Temukan Penginapan</h1>
+        <p>
+          Dapatkan penginapan ideal untuk liburan Anda di Bali bersama Dewata
+          Zen. Mulai dari vila pantai hingga hotel mewah, temukan tempat
+          menginap sesuai gaya dan kebutuhan Anda untuk pengalaman yang nyaman
+          dan berkesan!
+        </p>
+      </div>
+    </section>
+    <!--OBJECT END-->
+    <!--Filter Control-->
+    <nav class="button-filter">
+      <button class="filter-btn" data-category="semua">Semua</button>
+      <button class="filter-btn" data-category="penginapan">Penginapan</button>
+      <button class="filter-btn" data-category="guide">Guide</button>
+      <button class="filter-btn" data-category="paket">Paket Special</button>
+    </nav>
+    <!--FILTER CONTENT END-->
+    <!--CONTENT-->
+    <section class="content">
+      <div class="content-grid">
+        <div class="item penginapan" data-category="penginapan">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>Watermark Hotel and Spa Bali</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
         </div>
-        <!-- footer end -->
 
-        <!-- plugin -->
-        <script>
-            feather.replace();
-        </script>
-        <script src="js/script.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-    </body>
+        <div class="item penginapan" data-category="penginapan">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>Watermark Hotel and Spa Bali</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item penginapan" data-category="penginapan">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>Watermark Hotel and Spa Bali</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item penginapan" data-category="penginapan">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>Watermark Hotel and Spa Bali</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item penginapan" data-category="penginapan">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>Watermark Hotel and Spa Bali</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item penginapan" data-category="penginapan">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>Watermark Hotel and Spa Bali</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item penginapan" data-category="penginapan">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>Watermark Hotel and Spa Bali</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item penginapan" data-category="penginapan">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>Watermark Hotel and Spa Bali</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item penginapan" data-category="penginapan">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>Watermark Hotel and Spa Bali</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+        <!--GUIDE-->
+        <div class="item guide" data-category="guide">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>nnnnnn</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item guide" data-category="guide">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>nnnnnn</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item guide" data-category="guide">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>nnnnnn</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item guide" data-category="guide">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>nnnnnn</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item guide" data-category="guide">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>nnnnnn</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item guide" data-category="guide">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>nnnnnn</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item guide" data-category="guide">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>nnnnnn</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+        <!--PAKET-->
+        <div class="item paket" data-category="paket">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>bbbbb</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item paket" data-category="paket">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>bbbbb</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item paket" data-category="paket">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>bbbbb</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item paket" data-category="paket">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>bbbbb</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item paket" data-category="paket">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>bbbbb</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item paket" data-category="paket">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>bbbbb</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item paket" data-category="paket">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>bbbbb</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item paket" data-category="paket">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>bbbbb</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item paket" data-category="paket">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>bbbbb</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+
+        <div class="item paket" data-category="paket">
+          <img
+            src="img/tawaran-spesial/hotel1.jpg"
+            alt="Watermark Hotel and Spa Bali"
+          />
+          <h3>bbbbb</h3>
+          <p>Jimbaran, Kuta Selatan</p>
+          <p>Rp 919.542/malam</p>
+          <button class="book-btn">Pesan</button>
+        </div>
+      </div>
+    </section>
+
+    <!--CONTENT end -->
+
+    <!-- footer start -->
+    <footer class="footer">
+      <div class="logo">
+        <img src="img/logo.svg" alt="Logo" />
+      </div>
+      <div>
+        <h3>About Us</h3>
+        <p>
+          Dewata Zen adalah platform wisata yang diciptakan untuk mempermudah
+          wisatawan dalam menemukan dan memesan pengalaman terbaik di Bali.
+          Mulai dari pilihan destinasi, pemesanan hotel, hingga layanan pemandu
+          wisata, semua ada dalam satu platform.
+        </p>
+      </div>
+      <div>
+        <h3>Futher Link</h3>
+        <p><a href="#">Syarat dan Ketentuan</a></p>
+        <p><a href="#">Berita Terkini</a></p>
+      </div>
+      <div>
+        <h3>Get In Touch</h3>
+        <p>
+          <a href="https://instagram.com/dewatazen">
+            <i data-feather="instagram"></i>dewatazen
+          </a>
+        </p>
+        <p>
+          <a href="mailto:dewatazen@gmail.com">
+            <i data-feather="mail"></i>dewatazen@gmail.com
+          </a>
+        </p>
+      </div>
+    </footer>
+    <div class="copyright">© 2024 Dewata Zen. All right reserved</div>
+    <!-- footer end -->
+
+    <!-- plugin -->
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
