@@ -32,3 +32,23 @@ feather.replace();
                     });
                 });
             });
+
+
+            const searchOverlay = document.getElementById('searchOverlay');
+
+            document.addEventListener("click", function (e) {
+              if (!searchOverlay.contains(e.target) && !navbarNav.contains(e.target)) {
+                navbarNav.classList.remove("active");
+              }
+            });
+            
+            function toggleSearchOverlay() {
+                if (searchOverlay.style.display === 'flex') {
+                    searchOverlay.style.display = 'none';
+                } else {
+                    searchOverlay.style.display = 'flex';
+                }
+            }
+            
+            // Pastikan untuk memanggil fungsi ini saat ikon search ditekan
+            document.querySelector('.search-icon').addEventListener('click', toggleSearchOverlay);
