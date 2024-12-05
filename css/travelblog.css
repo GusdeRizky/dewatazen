@@ -84,6 +84,25 @@ body {
   cursor: pointer;
 }
 
+.more-popup {
+  position: fixed;
+  width: 100%;
+  height: 45%;
+  top: 0;
+  right: 0;
+  background: #f60;
+  padding: 30px;
+  margin-top: 83px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 10000;
+}
+
+.more-popup.active {
+  display: block;
+}
+/* end */
+
 .search-overlay {
   position: fixed;
   top: 0;
@@ -158,6 +177,12 @@ body {
   align-items: center;
 }
 
+.more-item img {
+  width: 100%; /* Gambar memenuhi lebar panel */
+  height: auto; /* Rasio gambar tetap terjaga */
+  object-fit: cover; /* Memastikan gambar terlihat rapi */
+}
+
 .search-bar input {
   width: 300px;
   padding: 10px;
@@ -209,13 +234,18 @@ body {
 
 .more-item {
   text-align: center;
+  /* margin-left: 50px; */
+  display: inline-block;
+  padding: 20px;
 }
 
 .more-item img {
-  width: 150px;
-  height: 150px;
+  width: 400px;
+  height: 200px;
+  /* padding: 20px; */
   object-fit: cover;
   border-radius: 8px;
+  justify-content: flex-start;
 }
 /* end */
 
