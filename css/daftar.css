@@ -1,0 +1,163 @@
+:root {
+  --primary: #1b4a30;
+  --bg: #ffffff;
+  --button-orange: #f57c00;
+  --button-hover: #e57300;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--bg);
+  background-image: url("../img/login.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  width: 900px;
+  height: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Bagian Kiri (Selamat Datang) */
+.welcome-container {
+  flex: 1;
+  background-color: var(--primary);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.welcome-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-container p {
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-container .btn-masuk {
+  padding: 10px 20px;
+  border: 2px solid var(--button-orange);
+  background-color: transparent;
+  color: var(--button-orange);
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.welcome-container .btn-masuk:hover {
+  background-color: var(--button-orange);
+  color: var(--white);
+}
+
+/* Bagian Kanan (Buat Akun) */
+.register-container {
+  flex: 1;
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.register-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+.register-container .feather {
+  stroke-width: 1.5;
+}
+
+.register-container p {
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.register-container input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.register-container .btn-buat {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  background-color: var(--button-orange);
+  border: none;
+  border-radius: 4px;
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.register-container .btn-buat:hover {
+  background-color: var(--button-hover);
+}
+
+.register-container a {
+  color: var(--button-orange);
+  text-decoration: none;
+}
+
+.register-container a:hover {
+  text-decoration: underline;
+}
+
+/* Ikon Media Sosial */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.feature-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.feature-icon:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
