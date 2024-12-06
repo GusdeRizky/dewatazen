@@ -10,14 +10,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   background-color: var(--bg);
   background-image: url("../img/daftar.jpg");
@@ -28,6 +28,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: row;
   width: 900px;
   height: 600px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -92,15 +93,10 @@ body {
   color: black;
 }
 
-.register-container .feather {
-  stroke-width: 1.5;
-}
-
 .register-container p {
   margin-bottom: 1rem;
   font-weight: 300;
   font-size: 1rem;
-  margin-top: 1rem;
 }
 
 .register-container input {
@@ -139,7 +135,10 @@ body {
   text-decoration: underline;
 }
 
-/* Ikon Media Sosial */
+.register-container .feather {
+  stroke-width: 1.5;
+  color: #1b4a30;
+}
 .social-icons {
   display: flex;
   gap: 15px;
@@ -153,11 +152,69 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  color: var(--primary);
   cursor: pointer;
 }
 
 .feature-icon:hover {
   background-color: var(--primary);
-  color: var(--white);
+}
+
+.feather:hover {
+  color: #fff;
+}
+
+/* Responsive Styling */
+
+/* Untuk Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .welcome-container,
+  .register-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .welcome-container h2,
+  .register-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .register-container input,
+  .register-container .btn-buat {
+    max-width: 100%;
+  }
+}
+
+/* Untuk Ponsel (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .welcome-container h2,
+  .register-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .welcome-container p,
+  .register-container p {
+    font-size: 0.9rem;
+  }
+
+  .register-container input,
+  .register-container .btn-buat {
+    padding: 8px;
+  }
 }
