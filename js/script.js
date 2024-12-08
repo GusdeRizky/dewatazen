@@ -103,3 +103,27 @@ document.addEventListener("click", (event) => {
 moreContent.addEventListener("click", (event) => {
   event.stopPropagation();
 });
+
+const descriptionInput = document.getElementById("deskripsi");
+
+// Fungsi untuk menangani Enter, menambah baris baru di dalam textarea
+descriptionInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter" && !event.shiftKey) {
+    event.preventDefault(); // Menghindari efek default Enter (menambah baris dalam textarea)
+
+    // Menambahkan baris baru (line break) pada posisi kursor
+    const currentPos = this.selectionStart;
+    const value = this.value;
+
+    // Menambahkan "\n" di posisi kursor
+    this.value =
+      value.substring(0, currentPos) + "\n" + value.substring(currentPos);
+
+    // Menjaga posisi kursor berada di akhir teks
+    this.selectionStart = this.selectionEnd = currentPos + 1;
+
+    // Mengubah tinggi textarea berdasarkan jumlah baris
+    this.style.height = "auto"; // Reset tinggi textarea
+    this.style.height = this.scrollHeight + "px"; // Sesuaikan tinggi dengan konten
+  }
+});
