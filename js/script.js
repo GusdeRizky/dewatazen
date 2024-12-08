@@ -14,47 +14,52 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// tawaran spesial 
+// tawaran spesial
 feather.replace();
 
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const items = document.querySelectorAll('.item');
+const filterButtons = document.querySelectorAll(".filter-btn");
+const items = document.querySelectorAll(".item");
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const category = button.getAttribute('data-category');
-                    items.forEach(item => {
-                        if (category === 'semua' || item.classList.contains(category)) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const category = button.getAttribute("data-category");
+    items.forEach((item) => {
+      if (category === "semua" || item.classList.contains(category)) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+});
 
+const searchOverlay = document.getElementById("searchOverlay");
 
-const searchOverlay = document.getElementById('searchOverlay');
-
-const searchBar = document.querySelector('.search-bar');
+const searchBar = document.querySelector(".search-bar");
 
 // Fungsi untuk membuka dan menutup overlay
 function toggleSearchOverlay() {
-    if (searchOverlay.style.display === 'flex') {
-        searchOverlay.style.display = 'none';
-    } else {
-        searchOverlay.style.display = 'flex';
-    }
+  if (searchOverlay.style.display === "flex") {
+    searchOverlay.style.display = "none";
+  } else {
+    searchOverlay.style.display = "flex";
+  }
 }
 
 // Event listener untuk ikon pencarian
-document.querySelector('.search-icon').addEventListener('click', toggleSearchOverlay);
+document
+  .querySelector(".search-icon")
+  .addEventListener("click", toggleSearchOverlay);
 
 // Event listener untuk menutup overlay ketika mengklik di luar kotak pencarian
-document.addEventListener('click', function (e) {
-    if (searchOverlay.style.display === 'flex' && !searchBar.contains(e.target) && !e.target.closest('.search-icon')) {
-        searchOverlay.style.display = 'none';
-    }
+document.addEventListener("click", function (e) {
+  if (
+    searchOverlay.style.display === "flex" &&
+    !searchBar.contains(e.target) &&
+    !e.target.closest(".search-icon")
+  ) {
+    searchOverlay.style.display = "none";
+  }
 });
 
 // // Ambil elemen tombol dan panel
@@ -86,7 +91,10 @@ moreButton.addEventListener("click", (event) => {
 
 // Fungsi untuk menutup panel "More" jika klik terjadi di luar panel
 document.addEventListener("click", (event) => {
-  if (!moreContent.contains(event.target) && !moreButton.contains(event.target)) {
+  if (
+    !moreContent.contains(event.target) &&
+    !moreButton.contains(event.target)
+  ) {
     moreContent.classList.remove("active");
   }
 });
