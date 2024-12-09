@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dewata Zen</title>
+    <!--START FAVICON-->
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+    <!--END FAVICON-->
+    <!-- FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- My style -->
+    <link rel="stylesheet" href="css/cobacoba.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <!-- Logo and Text on the Left -->
+        <a href="#" class="navbar-logo">DewataZen</a>
+        <!-- Right Side (Notification & Profile) -->
+        <div class="navbar-extra">
+          <a href="#" class="notif"><i data-feather="bell"></i></a>
+          <img
+            src="img/admin/profile.png"
+            alt="Profile Picture"
+            class="profile-pic"
+          />
+          <div class="profile-info">
+            <h1>Supri Yano</h1>
+            <h2>Admin Hotel Melani</h2>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <ul>
+            
+          <li>
+            <a href="superAdminmember.html" class="active"><i data-feather="users"></i>Member</a>
+          </li>
+          <li>
+            <a href="#"><i data-feather="trello"></i>Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+
+    <!-- Member Table -->
+    <div class="table-container">
+        <input
+          type="text"
+          class="search-box"
+          placeholder="Cari member"
+        />
+        <table class="member-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Nama</th>
+              <th>ID</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="img/superadmin/yetti.jpg" alt="Avatar" /> 
+              </td>
+              <td>Supri Yetti</td>
+              <td>1212301A</td>
+              <td>kenzi.lawson@example.com</td>
+              <td>Admin</td>
+              <td><button class="delete-btn">Hapus</button></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/superadmin/yetti.jpg" alt="Avatar" />
+              </td>
+              <td>Brooklyn Simmons</td>
+              <td>1723123U</td>
+              <td>nathan.roberts@example.com</td>
+              <td>Pengguna</td>
+              <td><button class="delete-btn">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>
+                  <img src="img/superadmin/yetti.jpg" alt="Avatar" />
+                </td>
+                <td>Supri Yano</td>
+                <td>1212301A</td>
+                <td>kenzi.lawson@example.com</td>
+                <td>Admin</td>
+                <td><button class="delete-btn">Hapus</button></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Ambil semua tautan menu
+    const menuLinks = document.querySelectorAll('.sidebar ul li a');
+    // Ambil URL halaman saat ini
+    const currentPage = window.location.pathname;
+
+    // Iterasi setiap tautan menu
+    menuLinks.forEach(link => {
+        // Cek jika href tautan sama dengan URL halaman saat ini
+        if (link.href.includes(currentPage)) {
+            link.classList.add('active'); // Tambahkan kelas active
+        }
+    });
+</script>
+
+    <!-- Feather Icon -->
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
