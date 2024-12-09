@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- My style -->
-    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/pesanan.css" />
   </head>
   <body>
     <div class="container">
@@ -52,13 +52,17 @@
             <a href="Adminprofile.html"><i data-feather="user"></i>Profile</a>
           </li>
           <li>
-            <a href="admindashboard.html"><i data-feather="trello"></i>Dashboard</a>
+            <a href="admindashboard.html"
+              ><i data-feather="trello"></i>Dashboard</a
+            >
           </li>
           <li>
-            <a href="adminpesanan.html"><i data-feather="shopping-bag"></i>Pesanan</a>
+            <a href="adminpesanan.html"
+              ><i data-feather="shopping-bag"></i>Pesanan</a
+            >
           </li>
           <li>
-            <a href="#report"><i data-feather="alert-circle"></i>Laporkan</a>
+            <a href="#"><i data-feather="alert-circle"></i>Laporkan</a>
           </li>
           <li>
             <a href="#logout"><i data-feather="log-out"></i>Keluar</a>
@@ -66,36 +70,55 @@
         </ul>
       </div>
     </div>
-    <!-- profile -->
-    <section id="profile" class="profile-section">
-        <h2>PROFILE</h2>
-        <div class="form-container">
-          <form>
-            <label for="username">Nama Pengguna :</label>
-            <input type="text" id="username" name="username" />
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" />
-            <label for="password">Kata Sandi :</label>
-            <input type="password" id="password" name="password" />
-            <label for="confirm-password">Ulangi Kata Sandi :</label>
-            <input
-              type="password"
-              id="confirm-password"
-              name="confirm-password"
-            />
-            <button type="submit" class="update-button">Perbarui Data</button>
-          </form>
-          <div class="avatar-section">
-            <p>Avatar Foto</p>
-            <div class="avatar-box">
-              <div class="avatar-icon">👤</div>
-              <button class="change-avatar">Ganti Foto</button>
-            </div>
+    <!-- pesanan -->
+    <div class="pesanan">
+      <div class="Judul"><h1>PESANAN</h1></div>
+      <div class="filter-buttons">
+        <button class="active">Semua</button> <button>Sedang Proses</button>
+        <button>Selesai</button>
+      </div>
+      <div class="order-card">
+        <div class="order-header">
+          <div class="order-label">A4</div>
+          <div class="order-info">
+            <p>Ariel Hikmat</p>
+            <p>Pesanan #1</p>
           </div>
         </div>
+        <div class="order-details">
+          <p>Selasa, 31 Oktober 2024</p>
+          <p>13:25</p>
+          <p>Barang: Suite For 6 Persons Room Only</p>
+          <p>Jumlah: 1</p>
+          <p>Harga: Rp 980.000</p>
+        </div>
+        <div class="order-actions">
+          <button class="reject">Tolak Pesanan</button>
+          <button class="accept">Terima Pesanan</button>
+        </div>
       </div>
-    </section>
-
+      <div class="order-card">
+        <div class="order-header">
+          <div class="order-label">A4</div>
+          <div class="order-info">
+            <p>Ariel Hikmat</p>
+            <p>Pesanan #1</p>
+          </div>
+        </div>
+        <div class="order-details">
+          <p>Selasa, 31 Oktober 2024</p>
+          <p>13:25</p>
+          <p>Barang: Suite For 6 Persons Room Only</p>
+          <p>Jumlah: 1</p>
+          <p>Harga: Rp 980.000</p>
+        </div>
+        <div class="order-actions">
+          <button class="reject">Tolak Pesanan</button>
+          <button class="accept">Terima Pesanan</button>
+        </div>
+      </div>
+      <!-- Tambahkan kartu pesanan tambahan di sini jika diperlukan -->
+    </div>
     <!-- Feather Icon -->
     <script>
       feather.replace();
