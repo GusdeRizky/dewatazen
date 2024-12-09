@@ -105,6 +105,10 @@
     z-index: 999;
   }
   
+  .sidebar .logout{
+    bottom: 200px;
+  }
+
   .sidebar ul li a.active {
     background-color: #176d35; /* Warna background saat aktif */
     font-weight: bold;        /* Tambahkan font tebal jika diperlukan */

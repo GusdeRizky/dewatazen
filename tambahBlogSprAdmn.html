@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- My style -->
-    <link rel="stylesheet" href="css/superAdminmember.css" />
+    <link rel="stylesheet" href="css/tambahBlog.css" />
   </head>
   <body>
     <div class="container">
@@ -50,10 +50,10 @@
         <ul>
             
           <li>
-            <a href="superAdminmember.html" class="active"><i data-feather="users"></i>Member</a>
+            <a href="superAdminmember.html"><i data-feather="users"></i>Member</a>
           </li>
           <li>
-            <a href="blogSprAdmn.html"><i data-feather="trello"></i>Blog</a>
+            <a href="blogSprAdmn.html" class="active"><i data-feather="trello"></i>Blog</a>
           </li>
           <li>
             <a href="laporkan.html"><i data-feather="alert-circle"></i>Laporkan</a>
@@ -64,78 +64,28 @@
         </ul>
       </div>
     </div>
-    
 
-    <!-- Member Table -->
-    <div class="table-container">
-        <input
-          type="text"
-          class="search-box"
-          placeholder="Cari member"
-        />
-        <table class="member-table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Nama</th>
-              <th>ID</th>
-              <th>Email</th>
-              <th>Role</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <img src="img/superadmin/yetti.jpg" alt="Avatar" /> 
-              </td>
-              <td>Supri Yetti</td>
-              <td>1212301A</td>
-              <td>kenzi.lawson@example.com</td>
-              <td>Admin</td>
-              <td><button class="delete-btn">Hapus</button></td>
-            </tr>
-            <tr>
-              <td>
-                <img src="img/superadmin/yetti.jpg" alt="Avatar" />
-              </td>
-              <td>Brooklyn Simmons</td>
-              <td>1723123U</td>
-              <td>nathan.roberts@example.com</td>
-              <td>Pengguna</td>
-              <td><button class="delete-btn">Hapus</button></td>
-            </tr>
-            <tr>
-                <td>
-                  <img src="img/superadmin/yetti.jpg" alt="Avatar" />
-                </td>
-                <td>Supri Yano</td>
-                <td>1212301A</td>
-                <td>kenzi.lawson@example.com</td>
-                <td>Admin</td>
-                <td><button class="delete-btn">Hapus</button></td>
-              </tr>
-          </tbody>
-        </table>
+    <!-- dashboard -->
+    <div class="dashboard">
+        <!-- <h1>Dashboard</h1> -->
+        <div class="form-group">
+            <label for="pengguna-name">Judul Postingan</label>
+            <input type="text" id="pengguna-name" name="pengguna-name">
+          </div>
+          <div class="form-group">
+            <label for="deskripsi">Detail</label>
+            <textarea id="deskripsi" name="deskripsi" rows="1" placeholder="Masukan Deskripsi (tekan Enter untuk menambah baris baru)"></textarea>
+          </div>          
+        <div class="form-group">
+          <label for="foto">Foto:</label>
+          <div class="upload-button">
+            <i data-feather="upload"></i>
+            <span>Tambahkan photo</span>
+          </div>
+        </div>
+        <button class="submit-button">Simpan</button>
       </div>
     </div>
-  </div>
-
-  <!-- <script>
-    // Ambil semua tautan menu
-    const menuLinks = document.querySelectorAll('.sidebar ul li a');
-    // Ambil URL halaman saat ini
-    const currentPage = window.location.pathname;
-
-    // Iterasi setiap tautan menu
-    menuLinks.forEach(link => {
-        // Cek jika href tautan sama dengan URL halaman saat ini
-        if (link.href.includes(currentPage)) {
-            link.classList.add('active'); // Tambahkan kelas active
-        }
-    });
-</script> -->
-
     <!-- Feather Icon -->
     <script>
       feather.replace();
