@@ -91,9 +91,6 @@ body {
 }
 
 /*object*/
-
-/* Main Image Section */
-
 #detail-container1{
     position: relative;
     max-width: 1200px;
@@ -106,9 +103,8 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 6rem;
-
-
 }
+
 #detail-container2{
     position: relative;
     max-width: 1200px;
@@ -119,61 +115,51 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
-    margin-top: 4rem;
-
-    
+    margin-top: 4rem; 
 }
 
 
 /* Gambar hotel */
-#guide-image {
+#paket-image {
     width: 100%;
     height: auto;
-    max-height: 500px; /* Membatasi tinggi gambar */
-    object-fit: cover; /* Menjaga rasio gambar */
+    max-height: 500px; 
+    object-fit: cover; 
     border-radius: 8px;
     margin: 20px;
     
 }
 
 /* Harga di sisi kanan */
-#guide-price {
+#paket-price {
     font-weight: bold;
-    font-size: 30px;
-    color: #1f513f; /* Warna hijau */
+    font-size: 40px;
+    color: #1f513f; 
     text-align: right;
-    position: absolute;  /* Membuat posisi absolut */
+    position: absolute;  
     right: 2rem;
-    top: 4rem; /* Memberikan jarak 20px dari sisi kanan container */
+    top: 4rem;
     margin-right: 2rem;
 }
 
 /* Nama hotel di sisi kiri */
-#guide-name {
+#paket-name {
     font-size: 30px;
     font-weight: bold;
-    color: var(--primary); /* Warna teks hitam */
+    color: var(--primary); 
     text-align: left;
     margin-top: 2rem;
     margin-left: 2rem;
 }
 
-/* Alamat hotel */
-#guide-location {
-    font-size: 20px;
-    color: #6c757d; /* Warna abu-abu */
-    text-align: left;
-    margin-top: 1rem;
-    margin-left: 2rem;
-}
 
 /* Container rating */
 #rating-container {
     font-size: 20px;
     font-family: Arial, sans-serif;
     color: var(--secondary);
-    margin-top: 10px;
-    margin-bottom: 15px ;
+    margin-top: 15px;
+    margin-bottom: 20px ;
     margin-left: 2rem;
 }
 
@@ -224,9 +210,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: absolute;  /* Membuat posisi absolut */
     right: 20px;
-    top: 3rem; /* Memberikan jarak 20px dari sisi kanan container */
     margin-right: 2rem;
-    margin-top: 9.5rem;
+    margin-top: 9rem;
     width: 550px;
     height: 200px;
     padding: 15px;
@@ -239,23 +224,16 @@ body {
     margin-bottom: 2rem;
 }
 
-
 .checkbox-container {
     display: flex;
-    flex-wrap: wrap; /* Membuat elemen anak membungkus jika terlalu panjang */
-    gap: 1.5rem; /* Memberikan jarak antar elemen */
+    flex-wrap: wrap; 
+    gap: 1.5rem; 
 }
 
 .checkbox-container div {
-    flex: 0 0 calc(33.333% - 20px); /* Membuat setiap elemen menempati 1/3 dari lebar kontainer */
+    flex: 0 0 calc(33.333% - 20px); 
     box-sizing: border-box;
 }
-
-
-
-
-/* Style untuk container */
-
 
   /* Style untuk label */
 .dropdown-container{
@@ -279,10 +257,10 @@ body {
 }
 
   /* Style untuk select */
-.dropdown-container select {
+.dropdown-container p {
     width: 1000px;
     padding: 8px;
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
     font-size: 14px;
@@ -374,37 +352,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-/* Bintang rating */
-/*
-.stars-outer {
-    position: relative;
-    display: inline-block;
-    font-size: 24px;
-    color: #ccc;
-    overflow: hidden;
-    width: 120px; 
-}
-
-.stars-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0; 
-    height: 100%;
-    color: #ffc107;
-    white-space: nowrap;
-    overflow: hidden;
-}
-*/
 
 
 /* Footer */

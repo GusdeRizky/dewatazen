@@ -39,7 +39,6 @@
         </div>
 
         <div class="navbar-extra">
-            <a href="#" id="search-button"><i data-feather="search"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
     </nav>
@@ -52,15 +51,11 @@
     <div id="detail-container2">
         <div>
             <p id="paket-name"></p>
-            <p id="hotel-location"></p> 
-            <p id="guide-location"></p>
             <div id="rating-container">
                 ★★★★☆
             </div>
         
-            
             <div id="akomodasi">
-                <!-- Menambahkan judul di bagian atas box -->
                 <div id="judul-akomodasi"> 
                     <h3>Area Akomodasi</h3>
                 </div>
@@ -81,11 +76,7 @@
 
             <div class="dropdown-container">
                 <h3>Jam Booking</h3>
-                <select id="options">
-                    <option value="1">Opsi 1</option>
-                    <option value="2">Opsi 2</option>
-                    <option value="3">Opsi 3</option>
-                </select>
+                <p>Booking</p>
             </div>
 
             <div class="radio-container">
@@ -106,17 +97,7 @@
                 </div>
             </div>
 
-            <div id="deskripsi-hotel">
-                <!-- Menambahkan judul di bagian atas box -->
-                <div id="judul-deskrispi"> 
-                    <h3>Deskripsi Tambahan</h3>
-                </div>
-                <div id="detail-deskripsi">
-                    <p>Watermark Hotel and Spa Bali adalah pilihan ideal untuk menginap di Jimbaran, Bali. Hotel ini menawarkan suasana nyaman dengan fasilitas lengkap seperti kolam renang, Wi-Fi, dan restoran. Cocok untuk wisatawan yang mencari kenyamanan dan kemudahan akses di sekitar Kuta Selatan.</p>
-                </div>
-            </div>
-
-            <div id="deskripsi-guide">
+            <div id="deskripsi">
                 <!-- Menambahkan judul di bagian atas box -->
                 <div id="judul-deskrispi"> 
                     <h3>Deskripsi Tambahan</h3>
@@ -130,44 +111,33 @@
 
         <div>
             <h3 id="paket-price"></h3>
-
         </div>
 
         <div id="fasilitas-akomodasi">
             <h3>Fasilitas Akomodasi</h3>
             <div class="checkbox-container">
                 <div>
-                    <input type="checkbox" id="wifi" name="wifi">
-                    <label for="wifi">Wi-Fi</label>
+                    <li>Wi-Fi</li>
                 </div>
                 <div>
-                    <input type="checkbox" id="parkir" name="parkir">
-                    <label for="parkir">Parkir</label>
+                    <li>Wi-Fi</li>
                 </div>
                 <div>
-                    <input type="checkbox" id="kolam" name="kolam">
-                    <label for="kolam">Kolam Renang</label>
+                    <li>Wi-Fi</li>
                 </div>
                 <div>
-                    <input type="checkbox" id="sarapan" name="sarapan">
-                    <label for="sarapan">Sarapan</label>
+                    <li>Wi-Fi</li>
                 </div>
                 <div>
-                    <input type="checkbox" id="restoran" name="restoran">
-                    <label for="restoran">Restoran</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="restoran" name="restoran">
-                    <label for="restoran">Restoran</label>
+                    <li>Wi-Fi</li>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="button-container">
-        <button id="pesanSekarang" onclick="redirectToPage1()">Pesan Sekarang</button>
+        <button id="pesanSekarang" onclick="redirectToPagePesanPaket1()">Pesan Sekarang</button>
     </div>
-
 
 
 
@@ -223,34 +193,23 @@
         }
 
         const images = {
-            1: 'img/tawaran-spesial/paket1.jpg', 
-            2: 'img/tawaran-spesial/paket2.jpg'  
+            1: 'img/tawaran-spesial/paket1.png', 
+            2: 'img/tawaran-spesial/paket2.png'  
         };
         
     
         const params = getQueryParams();
     
         document.getElementById('paket-image').src = images[params.id] || 'img/default.jpg';
-        document.getElementById('hotel-name').textContent = params.name || 'Hotel Default';
-        document.getElementById('guide-name').textContent = params.name || 'Hotel Default';
-        document.getElementById('hotel-location').textContent = params.location || 'Lokasi Tidak Diketahui';
-        document.getElementById('guide-location').textContent = params.location || 'Lokasi Tidak Diketahui';
+        document.getElementById('paket-name').textContent = params.name || 'Hotel Default';
         document.getElementById('paket-price').textContent = params.price || 'Harga Tidak Diketahui';
 
         document.getElementById("pesanSekarang").addEventListener("click", function() {
             const kasurValue = document.querySelector('input[name="kasur"]:checked')?.value || "";
 
-            const fasilitas = [];
-            if (document.getElementById("wifi").checked) fasilitas.push("Wi-Fi");
-            if (document.getElementById("parkir").checked) fasilitas.push("Parkir");
-            if (document.getElementById("kolam").checked) fasilitas.push("Kolam Renang");
-            if (document.getElementById("sarapan").checked) fasilitas.push("Sarapan");
-            if (document.getElementById("restoran").checked) fasilitas.push("Restoran");
 
             localStorage.setItem("kasur", kasurValue);
-            localStorage.setItem("fasilitas", JSON.stringify(fasilitas));
 
-            const selectedValue = document.getElementById("options").value;
         // Simpan nilai yang dipilih ke localStorage
         localStorage.setItem("selectedOption", selectedValue);
 
@@ -258,14 +217,8 @@
             window.location.href = "tawaran-special-detail-pesan-paket.html?id=" + params.id + "&name=" + encodeURIComponent(params.name) + "&location=" + encodeURIComponent(params.location) + "&price=" + encodeURIComponent(params.price);
         });
 
-        
-        
-        // Arahkan ke halaman baru
-        
-        
 
-        // Fungsi redirect untuk mengarahkan ke halaman detail
-        function redirectToPage1() {
+        function redirectToPagePesanPaket1() {
         const id = params.id;
         const name = encodeURIComponent(params.name);
         const location = encodeURIComponent(params.location);

@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
         <!-- My style -->
-        <link rel="stylesheet" href="css/" />
+        <link rel="stylesheet" href="css/tawaranspecialpesananguide.css" />
     </head>
 
 <body>
@@ -51,19 +51,20 @@
     </div>
     <div class="data1">
         <div class="left">
-            <p> <strong>Akomodasi</strong> <a>:</a> <span id="object-name" ></span></p>
+            <p> <strong>Guide</strong> <a>:</a> <span id="object-name" ></span></p>
             <p> <strong>Harga</strong> <a>:</a> <span id="object-price" ></span></p>
             <p> <strong>Lokasi</strong> <a>:</a> <span id="object-location" ></span></p>
-            <p> <strong>Status</strong> <a>:</a> <span id="object-status" ></span></p>
-            <p> <strong>Jam Booking</strong> <a>:</a> <span id="selected-option" ></span></p>
-            <p> <strong>Tipe Bed</strong> <a>:</a> <span id="selected-kasur" ></span></p>
-            <p> <strong>Fasilitas</strong> <a>:</a> <span id="selected-fasilitas" ></span></p>
         </div>
         <div class="right">
             <img id="object-image" src="" alt="guide Image" />
         </div>
     </div>
+    <div class="button-container">
+        <a id="hubungi" href="https://wa.me/62146597437">
+            <button>Hubungi Sekarang</button>
+        </a>
     </div>
+</div>
     <script>
         window.onload = function() {
             // Ambil parameter URL untuk mendapatkan data
@@ -77,36 +78,13 @@
     
             document.getElementById('object-image').src = images[params.id] || 'img/default.jpg';
             document.getElementById('object-name').textContent = `${params.name || 'Hotel Default'}`;
-            document.getElementById('object-location').textContent = `Lokasi: ${params.location || 'Lokasi Tidak Diketahui'}`;
+            document.getElementById('object-location').textContent = ` ${params.location || 'Lokasi Tidak Diketahui'}`;
             document.getElementById('object-price').textContent = `${params.price || 'Harga Tidak Diketahui'}`;
-            
-
-             // Ambil data dari localStorage
-            const kasurValue = localStorage.getItem("kasur");
-            const fasilitas = JSON.parse(localStorage.getItem("fasilitas"));
-
-            // Tampilkan data kasur dan fasilitas
-            document.getElementById("selected-kasur").textContent = ` ${kasurValue || "Tidak ada"}`;
-            document.getElementById("selected-fasilitas").innerHTML = fasilitas && fasilitas.length > 0
-                ? `  ${fasilitas.join(", ")}`
-                : " Tidak ada fasilitas yang dipilih";
-
-            // Ambil nilai yang disimpan dari localStorage
-            const selectedValue = localStorage.getItem("selectedOption");
-            // Tampilkan nilai yang dipilih
-            document.getElementById("selected-option").textContent = `${selectedValue || "Tidak ada"}`;
         
-            const status = params.status && params.status === 'status'
-                ? 'Menunggu Konfirmasi Pihak Hotel'
-                : 'Konfirmasi Selesai';
-            document.getElementById('object-status').textContent = 'Status: ' + status; 
     
         };
 
         
-            
-
-        // Menampilkan status berdasarkan parameter URL
         
         // Fungsi untuk membaca parameter dari URL
         function getQueryParams() {

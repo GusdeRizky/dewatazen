@@ -99,7 +99,7 @@ body {
     border-radius: 10px; /* Sudut membulat */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan box */
     width: 1250px; /* Lebar box */
-    height: 650px; /* Tinggi box */
+    height: 750px; /* Tinggi box */
     margin-top: 8rem;
     margin-left: 8rem;
 }
@@ -118,6 +118,7 @@ body {
     font-size: 1.8rem; /* Ukuran teks */
     color: #f56a2b; /* Warna teks */
     /* Tidak perlu justify-content, align-items di sini karena itu berlaku untuk kontainer */
+    margin-top: 2rem;
 }
 #object1 .header h4 {
     margin: 1rem; 
@@ -131,7 +132,8 @@ body {
     width: 500px;
     height: 400px;
     border-radius: 8px;
-    margin-bottom: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
     margin-right: 7rem;
 
 }
@@ -145,7 +147,7 @@ body {
 }
 
 #object1 .data1 .left  {
-    margin-top: 1.8rem;
+    margin-top: 8rem;
 }
 /* Styling untuk elemen di kiri */
 #object1 .data1 .left p {
@@ -176,6 +178,27 @@ body {
     flex: 1; /* Membuat elemen ini fleksibel dan mengambil ruang kanan */
 }
 
+#object1 .button-container {
+    display: flex;
+    justify-content: center; /* Pusatkan secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal */
+
+    margin-bottom: 4rem;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--secondary);
+}
 /* Footer */
 .footer {
     background-color: var(--primary);
@@ -247,6 +270,8 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
+
+
 
 /* Responsivitas */
 @media (max-width: 768px) {
@@ -386,3 +411,5 @@ body {
         width: 100%;
     }
 }
+
+
