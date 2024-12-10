@@ -1,10 +1,10 @@
 :root {
     --primary: #1b4a30;
-    --secondary: #E86910;
     --bg: #ffffff;
+    --secondary:#E86910
 }
 
-* {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,7 +19,7 @@ body {
     color: #000;
 }
 
-/* Navbar */
+  /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -85,66 +85,218 @@ body {
     cursor: pointer;
 }
 
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .search-bar {
+    background-color: #ff7900;
+    /* padding: 20px; */
+    padding-left: 650px;
+    padding-right: 650px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -400px;
+  }
+  
+  .search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .btn-search {
+    background-color: #1b4a30;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .btn-search:hover {
+    background-color: #145022;
+  }
+
 /* Object */
-.object .persegi {
+.object {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     width: 100%;
-    height: 305px;
-    background-color: var(--primary);
-    margin-top: 5.1rem;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 2rem;
-}
-
-.persegi h1 {
-    font-family: "Playfair Display", serif;
-    font-weight: 300;
-    font-size: 57px;
-    color: #fff;
-    margin-bottom: 1rem;
-}
-
-.persegi p {
-    font-size: 15px;
-    line-height: 1.6;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    color: #fff;
+    background-color: #f9f9f9; /* Latar belakang netral */
     margin: 0;
-    padding-left: 17rem;
-    padding-right: 17rem;
 }
 
-/* Button Filter */
-.button-filter {
+/* Kotak konten persegi */
+.object .persegi {
     display: flex;
-    padding-left: 3rem;
-    gap: 1rem;
-    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary); 
+    color: #fff; 
+    padding: 2.5rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); 
+    max-width:100%; 
+    width: 100%; 
+    margin: 2rem auto;
+    margin-top: 6rem;
 }
 
+.object .persegi:hover {
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+.object .persegi h1 {
+    font-size: 4rem; 
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px; 
+    line-height: 1.4; 
+}
+
+
+.object .persegi p {
+    font-size: 1.125rem; 
+    line-height: 1.8; 
+    margin: 0;
+    max-width: 60%; 
+    color: #f0f0f0; 
+}
+
+/* Responsif untuk layar sedang (tablet) */
+@media (max-width: 768px) {
+
+    .object .persegi h1 {
+        font-size: 2.5rem;
+    }
+
+    .object .persegi p {
+        font-size: 1.5rem;
+    }
+
+}
+
+/* Responsif untuk layar kecil (ponsel) */
+@media (max-width: 480px) {
+
+    .object .persegi h1 {
+        font-size: 1.5rem;
+    }
+
+    .object .persegi p {
+        font-size: 0.9rem;
+        line-height: 1.6; /* Jarak antar baris lebih rapat */
+    }
+}
+/*object*/
+
+/* Default layout: maksimal 3 elemen per baris */
+/* Pengaturan grid utama */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Maksimal 3 kolom */
+    gap: 20px; /* Jarak antar elemen */
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Atur grid untuk layar lebih kecil (maksimal 768px) */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    }
+}
+
+/* Atur grid untuk layar sangat kecil (maksimal 500px) */
+@media (max-width: 500px) {
+    .content-grid {
+        grid-template-columns: 1fr; /* 1 kolom */
+    }
+}
+
+/* Styling elemen item */
+.item {
+    background: #f9f9f9; /* Warna latar belakang elemen */
+    border: 1px solid #ddd; /* Border tipis */
+    border-radius: 8px; /* Sudut melengkung */
+    padding: 15px; /* Padding dalam elemen */
+    text-align: center; /* Konten di tengah */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+
+/* Gaya tombol filter */
 .filter-btn {
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 0.8rem 2rem;
+    background-color: var(--primary); /* Warna latar belakang default */
+    color: white; /* Warna teks */
+    border: none; /* Menghapus border */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    padding: 0.8rem 2rem; /* Padding */
     font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer; /* Menampilkan kursor pointer saat hover */
+    transition: background-color 0.3s, transform 0.2s; /* Efek transisi untuk warna dan transformasi */
+    margin-left: 3rem;
 }
 
+/* Efek hover pada tombol */
 .filter-btn:hover {
-    background-color: #145a3e;
-    transform: scale(1.05);
+    background-color: #145a3e; /* Warna latar belakang saat hover */
+    transform: scale(1.05); /* Efek zoom saat hover */
 }
 
+/* Efek saat tombol diklik (active state) */
+.filter-btn:active {
+    background-color: #ff7f00; /* Warna latar belakang saat diklik */
+    transform: scale(0.98); /* Efek mengecil saat tombol diklik */
+}
+
+/* Gaya saat tombol aktif (klik) */
 .filter-btn.active {
-    background-color: #ff7f00;
+    background-color: #ff7f00; /* Warna latar belakang saat aktif */
+}
+
+@media (max-width: 768px) {
+    /* Menyusun tombol menjadi baris tunggal */
+    .button-filter {
+        display: flex;
+        flex-direction: row; /* Horizontal */
+        justify-content: center; /* Menyusun tombol di tengah */
+        gap: 1rem;
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+}
+
+/* Media query untuk layar yang lebih kecil (misalnya, ponsel) */
+@media (max-width: 500px) {
+    .filter-btn {
+        font-size: 1.2rem; /* Ukuran font yang lebih kecil */
+        padding: 0.6rem 1.5rem; /* Padding lebih kecil */
+    }
 }
 
 /* Content */
