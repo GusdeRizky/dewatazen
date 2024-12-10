@@ -1,415 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dewata Zen</title>
-    <!--START FAVICON-->
-    <link rel="icon" type="image/png" href="img/logo.png" />
-    <link rel="shortcut icon" type="image/png" href="img/logo.png" />
-    <!--END FAVICON-->
-    <!-- FONT-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
-      rel="stylesheet"
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dewata Zen</title>
+<!--START FAVICON-->
+        <link rel="icon" type="image/png" href="img/logo.png" />
+        <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+<!--END FAVICON-->
+
+<!--START FONT-->    
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+            rel="stylesheet"
     />
+<!--END FONT--> 
 
-    <!-- Feather Icon -->
-    <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!--Start Feather Icon -->
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!--End Feather Icon -->
 
-    <!-- My style -->
-    <link rel="stylesheet" href="css/tawaranspesial.css" />
-  </head>
+<!-- My style -->
+        <link rel="stylesheet" href="css/tawaranspesial.css" />
+    </head>
 
-  <body>
-    <!-- navbar start -->
-    <nav class="navbar">
-      <a href="#" class="navbar-logo">Dewata<span>Zen</span>.</a>
+    <body>
 
-      <div class="navbar-nav">
-        <a href="homepage.html">Beranda</a>
-        <a href="about.html">Tentang Kami</a>
-        <a href="travelBlog.html">Travel Blog</a>
-        <a href="tawaran-spesial.html">Tawaran Spesial</a>
-        <a href="#more">More</a>
-      </div>
+<!-- navbar start -->
+        <nav class="navbar">
+            <a href="#" class="navbar-logo">Dewata<span>Zen</span>.</a>
 
-      <div class="navbar-extra">
-        <a button class="search-icon"><i data-feather="search"></i></button>
-        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
-      </div>
-    </nav>
-    <!-- Navbar end -->
+            <div class="navbar-nav">
+                <a href="homepage.html">Beranda</a>
+                <a href="about.html">Tentang Kami</a>
+                <a href="#travel">Travel Blog</a>
+                <a href="tawaran-spesial.html">Tawaran Spesial</a>
+                <a href="#more">More</a>
+            </div>
 
-    <div class="search-overlay" id="searchOverlay">
-      <div class="search-bar">
-          <input type="text" placeholder="Ketik di sini......" />
-          <button class="btn-search">Cari Disini</button>
-      </div>
-    </div>
+            <div class="navbar-extra">
+                <a href="#" id="search-button"><i data-feather="search"></i></a>
+                <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+            </div>
+        </nav>
+<!-- Navbar end -->
+        
+<!--OBJECT START-->
+        <section class="object">
+            <div class="persegi">
+                <h1> Temukan Penginapan Mu</h1>
+                <p>Dapatkan penginapan ideal untuk liburan 
+                    Anda di Bali bersama Dewata Zen. 
+                    Mulai dari vila pantai hingga hotel 
+                    mewah, temukan tempat menginap sesuai 
+                    gaya dan kebutuhan Anda untuk pengalaman 
+                    yang nyaman dan berkesan!
+                </p>
+            </div>
+        </section>
+<!--OBJECT END-->
 
-    <!--OBJECT START-->
-    <section class="object">
-      <div class="persegi">
-        <h1>Temukan Penginapan Mu</h1>
-        <p>
-          Dapatkan penginapan ideal untuk liburan Anda di Bali bersama Dewata
-          Zen. Mulai dari vila pantai hingga hotel mewah, temukan tempat
-          menginap sesuai gaya dan kebutuhan Anda untuk pengalaman yang nyaman
-          dan berkesan!
-        </p>
-      </div>
-    </section>
-    <!--OBJECT END-->
-    <!--Filter Control-->
-    <nav class="button-filter">
-      <button class="filter-btn" data-category="semua">Semua</button>
-      <button class="filter-btn" data-category="penginapan">Penginapan</button>
-      <button class="filter-btn" data-category="guide">Guide</button>
-      <button class="filter-btn" data-category="paket">Paket Special</button>
-    </nav>
-    <!--FILTER CONTENT END-->
-    <!--CONTENT-->
-    <section class="content">
-      <div class="content-grid">
-        <div class="item penginapan" data-category="penginapan">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>Watermark Hotel and Spa Bali</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
+<!--Filter Control-->
+        <nav class="button-filter">
+            <button class = "filter-btn " data-category="semua">Semua</button>
+            <button class = "filter-btn " data-category="penginapan">Penginapan</button>
+            <button class = "filter-btn " data-category="guide">Guide</button>
+            <button class = "filter-btn " data-category="paket">Paket Special</button>
+        </nav>
+<!--FILTER CONTENT END-->
+
+<!--CONTENT-->
+<!--Start Penginapan-->
+        <section class="content">
+            <div class="content-grid">
+                <div class="item" data-category="penginapan" data-id="1" data-name="Watermark Hotel and Spa Bali" data-location="Jimbaran, Kuta Selatan" data-price="Rp 919.542/malam" >
+                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
+                    <h3>Watermark Hotel and Spa Bali</h3>
+                    <p>Jimbaran, Kuta Selatan</p>
+                    <p>Rp 919.542/malam</p>
+                    <button class="book-btn" onclick="redirectToPage(this)">Pesan</button>
+                </div>
+
+                <div class="item" data-category="penginapan" data-id="2" data-name="bbbbbb" data-location="bbbbbb" data-price="bbbbb" >
+                    <img src="img/tawaran-spesial/hotel2.jpg" alt="Watermark Hotel and Spa Bali">
+                    <h3>bbbbb</h3>
+                    <p>bbbbb</p>
+                    <p>bbbbb</p>
+                    <button class="book-btn" onclick="redirectToPage(this)">Pesan</button>
+                </div>
+<!--End Penginapan-->
+                
+<!--START GUIDE-->
+                <div class="item" data-category="guide" data-id="1" data-name="Bli Ngurah - Tour Guide" data-location="Denpasar, Kota Madya" data-price="Rp 919.542/hari">
+                    <img src="img/tawaran-spesial/guide1.jpg" alt="img-guide">
+                    <h3>Bli Ngurah - Tour Guide</h3>
+                    <p>Denpasar, Kota Madya</p>
+                    <p>Rp 919.542/hari</p>
+                    <button class="book-btn" onclick="redirectToPageGuide(this)">Pesan</button>
+                </div>
+
+                <div class="item" data-category="guide" data-id="2" data-name="cccccc" data-location="ccccc" data-price="ccccc">
+                    <img src="img/tawaran-spesial/guide2.jpg" alt="img-guide">
+                    <h3>cccccc</h3>
+                    <p>ccccc</p>
+                    <p>ccccc</p>
+                    <button class="book-btn" onclick="redirectToPageGuide(this)">Pesan</button>
+                </div>
+<!--END GUIDE-->
+<!--START PAKET-->
+                <div class="item" data-category="paket" data-id="1" data-name="cccccc" data-location="ccccc" data-price="ccccc">
+                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
+                    <h3>bbbbb</h3>
+                    <p>Jimbaran, Kuta Selatan</p>
+                    <p>Rp 919.542/malam</p>
+                    <button class="book-btn" onclick="redirectToPagePaket(this)">Pesan</button>
+                </div>
+
+                <div class="item" data-category="paket" data-id="2" data-name="cccccc" data-location="ccccc" data-price="ccccc">
+                    <img src="img/tawaran-spesial/hotel1.jpg" alt="Watermark Hotel and Spa Bali">
+                    <h3>bbbbb</h3>
+                    <p>Jimbaran, Kuta Selatan</p>
+                    <p>Rp 919.542/malam</p>
+                    <button class="book-btn" onclick="redirectToPagePaket(this)">Pesan</button>
+                </div>
+<!--START PAKET-->
+            </div>
+        </section>
+<!--CONTENT end -->
+
+<!-- footer start -->
+        <footer class="footer"> 
+        <div class="logo"> 
+            <img src="img/logo.svg" alt="Logo"> 
+        </div> 
+        <div> 
+            <h3>About Us</h3> 
+            <p>Dewata Zen adalah platform wisata yang diciptakan untuk mempermudah wisatawan dalam menemukan dan memesan pengalaman terbaik di Bali. Mulai dari pilihan destinasi, pemesanan hotel, hingga layanan pemandu wisata, semua ada dalam satu platform.</p> 
+        </div> 
+        <div> 
+            <h3>Futher Link</h3> 
+            <p><a href="#">Syarat dan Ketentuan</a>
+            </p> <p><a href="#">Berita Terkini</a>
+            </p> 
+        </div> 
+        <div> 
+            <h3>Get In Touch</h3> 
+            <p> 
+                <a href="https://instagram.com/dewatazen">
+                <i data-feather="instagram"></i>dewatazen
+                </a>
+            </p> 
+            <p>
+                <a href="mailto:dewatazen@gmail.com">
+                <i data-feather="mail"></i>dewatazen@gmail.com
+                </a>
+            </p>
+        </div> 
+        </footer> 
+        <div class="copyright"> 
+            © 2024 Dewata Zen. All right reserved 
         </div>
+<!-- footer end -->
 
-        <div class="item penginapan" data-category="penginapan">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>Watermark Hotel and Spa Bali</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
+<!-- plugin -->
+        <script>
+            feather.replace();
 
-        <div class="item penginapan" data-category="penginapan">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>Watermark Hotel and Spa Bali</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
+            // Start Filter kategori
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const items = document.querySelectorAll('.content-grid .item');
 
-        <div class="item penginapan" data-category="penginapan">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>Watermark Hotel and Spa Bali</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const category = button.getAttribute('data-category');
+                    items.forEach(item => {
+                        if (category === 'semua' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            // End Filter kategori
 
-        <div class="item penginapan" data-category="penginapan">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>Watermark Hotel and Spa Bali</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
+            // Start Function to redirect to booking penginapan page
+            function redirectToPage(button) {
+            const item = button.closest('.item');
+            const itemId = item.getAttribute('data-id');
+            const itemName = item.getAttribute('data-name');
+            const itemLocation = item.getAttribute('data-location');
+            const itemPrice = item.getAttribute('data-price');
+    window.location.href = `tawaran-special-pesan.html?id=${itemId}&name=${encodeURIComponent(itemName)}&location=${encodeURIComponent(itemLocation)}&price=${encodeURIComponent(itemPrice)}`;
+}
+// Start Function to redirect to booking page
 
-        <div class="item penginapan" data-category="penginapan">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>Watermark Hotel and Spa Bali</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
+function redirectToPageGuide(button) {
+  const item = button.closest('.item');
+  const itemId = item.getAttribute('data-id');
+  const itemName = item.getAttribute('data-name');
+  const itemLocation = item.getAttribute('data-location');
+  const itemPrice = item.getAttribute('data-price');
 
-        <div class="item penginapan" data-category="penginapan">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>Watermark Hotel and Spa Bali</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
+  // You can pass these details to a new page via URL parameters or store them in localStorage.
+  // For example, navigating to a booking page with item details:
+  window.location.href = `tawaran-special-pesan-guide.html?id=${itemId}&name=${encodeURIComponent(itemName)}&location=${encodeURIComponent(itemLocation)}&price=${encodeURIComponent(itemPrice)}`;
+}
 
-        <div class="item penginapan" data-category="penginapan">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>Watermark Hotel and Spa Bali</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
+function redirectToPagePaket(button) {
+  const item = button.closest('.item');
+  const itemId = item.getAttribute('data-id');
+  const itemName = item.getAttribute('data-name');
+  const itemLocation = item.getAttribute('data-location');
+  const itemPrice = item.getAttribute('data-price');
 
-        <div class="item penginapan" data-category="penginapan">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>Watermark Hotel and Spa Bali</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
-        <!--GUIDE-->
-        <div class="item guide" data-category="guide">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>nnnnnn</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
+  // You can pass these details to a new page via URL parameters or store them in localStorage.
+  // For example, navigating to a booking page with item details:
+  window.location.href = `tawaran-special-pesan-paket.html?id=${itemId}&name=${encodeURIComponent(itemName)}&location=${encodeURIComponent(itemLocation)}&price=${encodeURIComponent(itemPrice)}`;
+}
 
-        <div class="item guide" data-category="guide">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>nnnnnn</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
+        </script>
 
-        <div class="item guide" data-category="guide">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>nnnnnn</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
 
-        <div class="item guide" data-category="guide">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>nnnnnn</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
 
-        <div class="item guide" data-category="guide">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>nnnnnn</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
 
-        <div class="item guide" data-category="guide">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>nnnnnn</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
+        
 
-        <div class="item guide" data-category="guide">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>nnnnnn</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
-        <!--PAKET-->
-        <div class="item paket" data-category="paket">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>bbbbb</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
-
-        <div class="item paket" data-category="paket">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>bbbbb</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
-
-        <div class="item paket" data-category="paket">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>bbbbb</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
-
-        <div class="item paket" data-category="paket">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>bbbbb</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
-
-        <div class="item paket" data-category="paket">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>bbbbb</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
-
-        <div class="item paket" data-category="paket">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>bbbbb</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
-
-        <div class="item paket" data-category="paket">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>bbbbb</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
-
-        <div class="item paket" data-category="paket">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>bbbbb</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
-
-        <div class="item paket" data-category="paket">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>bbbbb</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
-
-        <div class="item paket" data-category="paket">
-          <img
-            src="img/tawaran-spesial/hotel1.jpg"
-            alt="Watermark Hotel and Spa Bali"
-          />
-          <h3>bbbbb</h3>
-          <p>Jimbaran, Kuta Selatan</p>
-          <p>Rp 919.542/malam</p>
-          <button class="book-btn">Pesan</button>
-        </div>
-      </div>
-    </section>
-
-    <!--CONTENT end -->
-
-    <!-- footer start -->
-    <footer class="footer">
-      <div class="logo">
-        <img src="img/logo.svg" alt="Logo" />
-      </div>
-      <div>
-        <h3>About Us</h3>
-        <p>
-          Dewata Zen adalah platform wisata yang diciptakan untuk mempermudah
-          wisatawan dalam menemukan dan memesan pengalaman terbaik di Bali.
-          Mulai dari pilihan destinasi, pemesanan hotel, hingga layanan pemandu
-          wisata, semua ada dalam satu platform.
-        </p>
-      </div>
-      <div>
-        <h3>Futher Link</h3>
-        <p><a href="#">Syarat dan Ketentuan</a></p>
-        <p><a href="#">Berita Terkini</a></p>
-      </div>
-      <div>
-        <h3>Get In Touch</h3>
-        <p>
-          <a href="https://instagram.com/dewatazen">
-            <i data-feather="instagram"></i>dewatazen
-          </a>
-        </p>
-        <p>
-          <a href="mailto:dewatazen@gmail.com">
-            <i data-feather="mail"></i>dewatazen@gmail.com
-          </a>
-        </p>
-      </div>
-    </footer>
-    <div class="copyright">© 2024 Dewata Zen. All right reserved</div>
-    <!-- footer end -->
-
-    <!-- plugin -->
-    <script>
-      feather.replace();
-    </script>
-    <script src="js/script.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+        
+    </body>
 </html>

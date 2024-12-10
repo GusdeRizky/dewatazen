@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
         <!-- My style -->
-        <link rel="stylesheet" href="css/tawaranspecialpesan.css" />
+        <link rel="stylesheet" href="css/tawaranspecialpesanpaket.css" />
     </head>
 
 <body>
@@ -46,13 +46,14 @@
     <!-- object -->
 
     <div id="detail-container1">
-        <img id="hotel-image" src="" alt="Gambar Hotel">
+        <img id="paket-image" src="" alt="Gambar paket">
     </div>
         
     <div id="detail-container2">
         <div>
-            <p id="hotel-name"></p>
+            <p id="paket-name"></p>
             <p id="hotel-location"></p> 
+            <p id="guide-location"></p>
             <div id="rating-container">
                 ★★★★☆
             </div>
@@ -105,7 +106,17 @@
                 </div>
             </div>
 
-            <div id="deskripsi">
+            <div id="deskripsi-hotel">
+                <!-- Menambahkan judul di bagian atas box -->
+                <div id="judul-deskrispi"> 
+                    <h3>Deskripsi Tambahan</h3>
+                </div>
+                <div id="detail-deskripsi">
+                    <p>Watermark Hotel and Spa Bali adalah pilihan ideal untuk menginap di Jimbaran, Bali. Hotel ini menawarkan suasana nyaman dengan fasilitas lengkap seperti kolam renang, Wi-Fi, dan restoran. Cocok untuk wisatawan yang mencari kenyamanan dan kemudahan akses di sekitar Kuta Selatan.</p>
+                </div>
+            </div>
+
+            <div id="deskripsi-guide">
                 <!-- Menambahkan judul di bagian atas box -->
                 <div id="judul-deskrispi"> 
                     <h3>Deskripsi Tambahan</h3>
@@ -118,7 +129,8 @@
         </div>
 
         <div>
-            <h3 id="hotel-price"></h3>
+            <h3 id="paket-price"></h3>
+
         </div>
 
         <div id="fasilitas-akomodasi">
@@ -128,7 +140,7 @@
                     <input type="checkbox" id="wifi" name="wifi">
                     <label for="wifi">Wi-Fi</label>
                 </div>
-                <div>1q
+                <div>
                     <input type="checkbox" id="parkir" name="parkir">
                     <label for="parkir">Parkir</label>
                 </div>
@@ -211,17 +223,19 @@
         }
 
         const images = {
-            1: 'img/tawaran-spesial/hotel1.jpg', 
-            2: 'img/tawaran-spesial/hotel2.jpg'  
+            1: 'img/tawaran-spesial/paket1.jpg', 
+            2: 'img/tawaran-spesial/paket2.jpg'  
         };
         
     
         const params = getQueryParams();
     
-        document.getElementById('hotel-image').src = images[params.id] || 'img/default.jpg';
+        document.getElementById('paket-image').src = images[params.id] || 'img/default.jpg';
         document.getElementById('hotel-name').textContent = params.name || 'Hotel Default';
+        document.getElementById('guide-name').textContent = params.name || 'Hotel Default';
         document.getElementById('hotel-location').textContent = params.location || 'Lokasi Tidak Diketahui';
-        document.getElementById('hotel-price').textContent = params.price || 'Harga Tidak Diketahui';
+        document.getElementById('guide-location').textContent = params.location || 'Lokasi Tidak Diketahui';
+        document.getElementById('paket-price').textContent = params.price || 'Harga Tidak Diketahui';
 
         document.getElementById("pesanSekarang").addEventListener("click", function() {
             const kasurValue = document.querySelector('input[name="kasur"]:checked')?.value || "";
@@ -241,7 +255,7 @@
         localStorage.setItem("selectedOption", selectedValue);
 
         // Arahkan ke halaman selanjutnya
-            window.location.href = "tawaran-special-detail-pesan.html?id=" + params.id + "&name=" + encodeURIComponent(params.name) + "&location=" + encodeURIComponent(params.location) + "&price=" + encodeURIComponent(params.price);
+            window.location.href = "tawaran-special-detail-pesan-paket.html?id=" + params.id + "&name=" + encodeURIComponent(params.name) + "&location=" + encodeURIComponent(params.location) + "&price=" + encodeURIComponent(params.price);
         });
 
         
@@ -257,7 +271,7 @@
         const location = encodeURIComponent(params.location);
         const price = encodeURIComponent(params.price);
 
-        window.location.href = `tawaran-special-detail-pesan.html?id=${id}&name=${name}&location=${location}&price=${price}`;
+        window.location.href = `tawaran-special-detail-pesan-paket.html?id=${id}&name=${name}&location=${location}&price=${price}`;
 }
 
         

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dewata Zen</title>
+        <!--START FAVICON-->
+        <link rel="icon" type="image/png" href="img/logo.png" />
+        <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+        <!--END FAVICON-->
+        <!-- FONT-->    
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+            rel="stylesheet"
+    />
+
+        <!-- Feather Icon -->
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <!-- My style -->
+        <link rel="stylesheet" href="css/tawaranspecialpesanan.css" />
+    </head>
+
+<body>
+    <!-- navbar start -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Dewata<span>Zen</span>.</a>
+
+        <div class="navbar-nav">
+            <a href="homepage.html">Beranda</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="#travel">Travel Blog</a>
+            <a href="tawaran-spesial.html">Tawaran Spesial</a>
+            <a href="#more">More</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+<!-- object -->
+<div id="object1">
+    <div class="header">
+        <h3>Hasil Reservasi Terkirim ke Email  !</h3>
+        <h4>Check email anda secara berkala</h4>
+    </div>
+    <div class="data1">
+        <div class="left">
+            <p> <strong>Akomodasi</strong> <a>:</a> <span id="object-name" ></span></p>
+            <p> <strong>Harga</strong> <a>:</a> <span id="object-price" ></span></p>
+            <p> <strong>Lokasi</strong> <a>:</a> <span id="object-location" ></span></p>
+            <p> <strong>Status</strong> <a>:</a> <span id="object-status" ></span></p>
+            <p> <strong>Jam Booking</strong> <a>:</a> <span id="selected-option" ></span></p>
+            <p> <strong>Tipe Bed</strong> <a>:</a> <span id="selected-kasur" ></span></p>
+            <p> <strong>Fasilitas</strong> <a>:</a> <span id="selected-fasilitas" ></span></p>
+        </div>
+        <div class="right">
+            <img id="object-image" src="" alt="Hotel Image" />
+        </div>
+    </div>
+    </div>
+    <script>
+        window.onload = function() {
+            // Ambil parameter URL untuk mendapatkan data
+            const params = getQueryParams();
+    
+            // Mengisi data hotel secara otomatis
+            const images = {
+                1: 'img/tawaran-spesial/hotel1.jpg',
+                2: 'img/tawaran-spesial/hotel2.jpg'
+            };
+    
+            document.getElementById('object-image').src = images[params.id] || 'img/default.jpg';
+            document.getElementById('object-name').textContent = `${params.name || 'Hotel Default'}`;
+            document.getElementById('object-location').textContent = `Lokasi: ${params.location || 'Lokasi Tidak Diketahui'}`;
+            document.getElementById('object-price').textContent = `${params.price || 'Harga Tidak Diketahui'}`;
+            
+
+             // Ambil data dari localStorage
+            const kasurValue = localStorage.getItem("kasur");
+            const fasilitas = JSON.parse(localStorage.getItem("fasilitas"));
+
+            // Tampilkan data kasur dan fasilitas
+            document.getElementById("selected-kasur").textContent = ` ${kasurValue || "Tidak ada"}`;
+            document.getElementById("selected-fasilitas").innerHTML = fasilitas && fasilitas.length > 0
+                ? `  ${fasilitas.join(", ")}`
+                : " Tidak ada fasilitas yang dipilih";
+
+            // Ambil nilai yang disimpan dari localStorage
+            const selectedValue = localStorage.getItem("selectedOption");
+            // Tampilkan nilai yang dipilih
+            document.getElementById("selected-option").textContent = `${selectedValue || "Tidak ada"}`;
+        
+            const status = params.status && params.status === 'status'
+                ? 'Menunggu Konfirmasi Pihak Hotel'
+                : 'Konfirmasi Selesai';
+            document.getElementById('object-status').textContent = ' ' + status; 
+    
+        };
+
+        
+            
+
+        // Menampilkan status berdasarkan parameter URL
+        
+        // Fungsi untuk membaca parameter dari URL
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                id: params.get('id'),
+                name: params.get('name'),
+                location: params.get('location'),
+                price: params.get('price'),
+                status: params.get('status')
+            };
+        }
+    </script>
+    
+        
+
+<!-- footer start -->
+<footer class="footer"> 
+    <div class="logo"> 
+        <img src="img/logo.svg" alt="Logo"> 
+    </div> 
+    <div> 
+        <h3>About Us</h3> 
+        <p>Dewata Zen adalah platform wisata yang diciptakan untuk mempermudah wisatawan dalam menemukan dan memesan pengalaman terbaik di Bali. Mulai dari pilihan destinasi, pemesanan hotel, hingga layanan pemandu wisata, semua ada dalam satu platform.</p> 
+    </div> 
+    <div> 
+        <h3>Futher Link</h3> 
+        <p><a href="#">Syarat dan Ketentuan</a>
+        </p> <p><a href="#">Berita Terkini</a>
+        </p> 
+    </div> 
+    <div> 
+        <h3>Get In Touch</h3> 
+        <p> 
+            <a href="https://instagram.com/dewatazen">
+            <i data-feather="instagram"></i>dewatazen
+            </a>
+        </p> 
+        <p>
+            <a href="mailto:dewatazen@gmail.com">
+            <i data-feather="mail"></i>dewatazen@gmail.com
+            </a>
+        </p>
+    </div> 
+    </footer> 
+    <div class="copyright"> 
+        © 2024 Dewata Zen. All right reserved 
+    </div>
+    <!-- footer end -->
+    
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>

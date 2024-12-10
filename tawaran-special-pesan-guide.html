@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
         <!-- My style -->
-        <link rel="stylesheet" href="css/tawaranspecialpesan.css" />
+        <link rel="stylesheet" href="css/tawaranspecialpesanguide.css" />
     </head>
 
 <body>
@@ -46,64 +46,18 @@
     <!-- object -->
 
     <div id="detail-container1">
-        <img id="hotel-image" src="" alt="Gambar Hotel">
+        <img id="guide-image" src="" alt="Gambar guide">
     </div>
         
     <div id="detail-container2">
         <div>
-            <p id="hotel-name"></p>
-            <p id="hotel-location"></p> 
+            <p id="guide-name"></p>
+            <p id="guide-location"></p> 
             <div id="rating-container">
                 ★★★★☆
             </div>
         
-            
-            <div id="akomodasi">
-                <!-- Menambahkan judul di bagian atas box -->
-                <div id="judul-akomodasi"> 
-                    <h3>Area Akomodasi</h3>
-                </div>
-                <div id="detail-akomodasi">
-                    <div id="akomodasi-data">
-                        <p>Jl.a</p>
-                        <p>Jl.b</p>
-                        <p>Jl.c</p>
-                    </div>
-                
-                    <div id="akomodasi-jarak">
-                        <p>12 Km</p>
-                        <p>12 Km</p>
-                        <p>12 Km</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dropdown-container">
-                <h3>Jam Booking</h3>
-                <select id="options">
-                    <option value="1">Opsi 1</option>
-                    <option value="2">Opsi 2</option>
-                    <option value="3">Opsi 3</option>
-                </select>
-            </div>
-
-            <div class="radio-container">
-                <h4>Pilih Kamar</h4>
-                <div class="radio-options">
-                    <label>
-                    <input type="radio" name="kasur" value="1" />
-                    1 Kasur
-                    </label>
-                    <label>
-                    <input type="radio" name="kasur" value="2" />
-                    2 Kasur
-                    </label>
-                    <label>
-                    <input type="radio" name="kasur" value="3" />
-                    3 Kasur
-                    </label>
-                </div>
-            </div>
+    
 
             <div id="deskripsi">
                 <!-- Menambahkan judul di bagian atas box -->
@@ -118,42 +72,13 @@
         </div>
 
         <div>
-            <h3 id="hotel-price"></h3>
+            <h3 id="guide-price"></h3>
         </div>
 
-        <div id="fasilitas-akomodasi">
-            <h3>Fasilitas Akomodasi</h3>
-            <div class="checkbox-container">
-                <div>
-                    <input type="checkbox" id="wifi" name="wifi">
-                    <label for="wifi">Wi-Fi</label>
-                </div>
-                <div>1q
-                    <input type="checkbox" id="parkir" name="parkir">
-                    <label for="parkir">Parkir</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="kolam" name="kolam">
-                    <label for="kolam">Kolam Renang</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="sarapan" name="sarapan">
-                    <label for="sarapan">Sarapan</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="restoran" name="restoran">
-                    <label for="restoran">Restoran</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="restoran" name="restoran">
-                    <label for="restoran">Restoran</label>
-                </div>
-            </div>
-        </div>
     </div>
 
     <div class="button-container">
-        <button id="pesanSekarang" onclick="redirectToPage1()">Pesan Sekarang</button>
+        <button id="pesanSekarang" onclick="redirectToPagePesanGuide1()">Pesan Sekarang</button>
     </div>
 
 
@@ -211,53 +136,35 @@
         }
 
         const images = {
-            1: 'img/tawaran-spesial/hotel1.jpg', 
-            2: 'img/tawaran-spesial/hotel2.jpg'  
+            1: 'img/tawaran-spesial/guide1.jpg', 
+            2: 'img/tawaran-spesial/guide2.jpg'  
         };
         
     
         const params = getQueryParams();
     
-        document.getElementById('hotel-image').src = images[params.id] || 'img/default.jpg';
-        document.getElementById('hotel-name').textContent = params.name || 'Hotel Default';
-        document.getElementById('hotel-location').textContent = params.location || 'Lokasi Tidak Diketahui';
-        document.getElementById('hotel-price').textContent = params.price || 'Harga Tidak Diketahui';
+        document.getElementById('guide-image').src = images[params.id] || 'img/default.jpg';
+        document.getElementById('guide-name').textContent = params.name || 'Hotel Default';
+        document.getElementById('guide-location').textContent = params.location || 'Lokasi Tidak Diketahui';
+        document.getElementById('guide-price').textContent = params.price || 'Harga Tidak Diketahui';
 
         document.getElementById("pesanSekarang").addEventListener("click", function() {
             const kasurValue = document.querySelector('input[name="kasur"]:checked')?.value || "";
 
-            const fasilitas = [];
-            if (document.getElementById("wifi").checked) fasilitas.push("Wi-Fi");
-            if (document.getElementById("parkir").checked) fasilitas.push("Parkir");
-            if (document.getElementById("kolam").checked) fasilitas.push("Kolam Renang");
-            if (document.getElementById("sarapan").checked) fasilitas.push("Sarapan");
-            if (document.getElementById("restoran").checked) fasilitas.push("Restoran");
-
-            localStorage.setItem("kasur", kasurValue);
-            localStorage.setItem("fasilitas", JSON.stringify(fasilitas));
-
-            const selectedValue = document.getElementById("options").value;
-        // Simpan nilai yang dipilih ke localStorage
-        localStorage.setItem("selectedOption", selectedValue);
-
         // Arahkan ke halaman selanjutnya
-            window.location.href = "tawaran-special-detail-pesan.html?id=" + params.id + "&name=" + encodeURIComponent(params.name) + "&location=" + encodeURIComponent(params.location) + "&price=" + encodeURIComponent(params.price);
+            window.location.href = "tawaran-special-detail-pesan-guide.html?id=" + params.id + "&name=" + encodeURIComponent(params.name) + "&location=" + encodeURIComponent(params.location) + "&price=" + encodeURIComponent(params.price);
         });
 
-        
-        
         // Arahkan ke halaman baru
-        
-        
-
+    
         // Fungsi redirect untuk mengarahkan ke halaman detail
-        function redirectToPage1() {
+        function redirectToPagePesanGuide1() {
         const id = params.id;
         const name = encodeURIComponent(params.name);
         const location = encodeURIComponent(params.location);
         const price = encodeURIComponent(params.price);
 
-        window.location.href = `tawaran-special-detail-pesan.html?id=${id}&name=${name}&location=${location}&price=${price}`;
+        window.location.href = `tawaran-special-detail-pesan-guide.html?id=${id}&name=${name}&location=${location}&price=${price}`;
 }
 
         
