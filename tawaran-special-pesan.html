@@ -33,18 +33,18 @@
         <div class="navbar-nav">
             <a href="homepage.html">Beranda</a>
             <a href="about.html">Tentang Kami</a>
-            <a href="travelBlog.html">Travel Blog</a>
+            <a href="#travel">Travel Blog</a>
             <a href="tawaran-spesial.html">Tawaran Spesial</a>
-            <a href="telusuri.html">More</a>
+            <a href="#more">More</a>
         </div>
 
         <div class="navbar-extra">
-            <a href="#" id="search-button"><i data-feather="search"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
     </nav>
-    <!-- object -->
+    <!-- navbar end -->
 
+<!-- start object -->
     <div id="detail-container1">
         <img id="hotel-image" src="" alt="Gambar Hotel">
     </div>
@@ -58,7 +58,6 @@
             </div>
         
             <div id="akomodasi">
-                <!-- Menambahkan judul di bagian atas box -->
                 <div id="judul-akomodasi"> 
                     <h3>Area Akomodasi</h3>
                 </div>
@@ -77,22 +76,9 @@
                 </div>
             </div>
 
-            <div id="fasilitas-akomodasi">
-                <h3>Fasilitas Akomodasi</h3>
-                <div class="checkbox-container">
-                    <li>Wifi</li>
-                    <li>Parkir</li>
-                    <li>Kolam Renang</li>
-                    <li>Sarapan</li>
-                    <li>Restoran</li>
-                </div>
-            </div>
-
             <div class="dropdown-container">
                 <h3>Jam Booking</h3>
-                <div>
-                    <p>boooking</p>
-                </div>
+                <p>Booking</p>
             </div>
 
             <div class="radio-container">
@@ -129,15 +115,32 @@
             <h3 id="hotel-price"></h3>
         </div>
 
-        
+        <div id="fasilitas-akomodasi">
+            <h3>Fasilitas Akomodasi</h3>
+            <div class="checkbox-container">
+                <div>
+                    <li>Wi-Fi</li>
+                </div>
+                <div>
+                    <li>Wi-Fi</li>
+                </div>
+                <div>
+                    <li>Wi-Fi</li>
+                </div>
+                <div>
+                    <li>Wi-Fi</li>
+                </div>
+                <div>
+                    <li>Wi-Fi</li>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="button-container">
         <button id="pesanSekarang" onclick="redirectToPage1()">Pesan Sekarang</button>
     </div>
-
-
-
+<!-- end object -->
 
 <!-- footer start -->
 <footer class="footer"> 
@@ -173,13 +176,11 @@
     </div>
     <!-- footer end -->
     
-    <!-- plugin -->
-    
 
+<!--Start Script-->
     <script>
-        
         feather.replace();
-            // Fungsi untuk membaca parameter dari URL
+
         function getQueryParams() {
             const params = new URLSearchParams(window.location.search);
             return {
@@ -206,29 +207,14 @@
         document.getElementById("pesanSekarang").addEventListener("click", function() {
             const kasurValue = document.querySelector('input[name="kasur"]:checked')?.value || "";
 
-            const fasilitas = [];
-            if (document.getElementById("wifi").checked) fasilitas.push("Wi-Fi");
-            if (document.getElementById("parkir").checked) fasilitas.push("Parkir");
-            if (document.getElementById("kolam").checked) fasilitas.push("Kolam Renang");
-            if (document.getElementById("sarapan").checked) fasilitas.push("Sarapan");
-            if (document.getElementById("restoran").checked) fasilitas.push("Restoran");
-
             localStorage.setItem("kasur", kasurValue);
-            localStorage.setItem("fasilitas", JSON.stringify(fasilitas));
 
-            const selectedValue = document.getElementById("options").value;
-        // Simpan nilai yang dipilih ke localStorage
+
         localStorage.setItem("selectedOption", selectedValue);
 
         // Arahkan ke halaman selanjutnya
             window.location.href = "tawaran-special-detail-pesan.html?id=" + params.id + "&name=" + encodeURIComponent(params.name) + "&location=" + encodeURIComponent(params.location) + "&price=" + encodeURIComponent(params.price);
         });
-
-        
-        
-        // Arahkan ke halaman baru
-        
-        
 
         // Fungsi redirect untuk mengarahkan ke halaman detail
         function redirectToPage1() {
@@ -240,12 +226,12 @@
         window.location.href = `tawaran-special-detail-pesan.html?id=${id}&name=${name}&location=${location}&price=${price}`;
 }
 
-        
     </script>
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+<!--Start Script-->
 </body>
 </html>
