@@ -33,16 +33,16 @@ filterButtons.forEach((button) => {
   });
 });
 
-const searchOverlay = document.getElementById("searchOverlay");
+const searchOverlay1 = document.getElementById("searchOverlay");
 
 const searchBar = document.querySelector(".search-bar");
 
 // Fungsi untuk membuka dan menutup overlay
 function toggleSearchOverlay() {
-  if (searchOverlay.style.display === "flex") {
-    searchOverlay.style.display = "none";
+  if (searchOverlay1.style.display === "flex") {
+    searchOverlay1.style.display = "none";
   } else {
-    searchOverlay.style.display = "flex";
+    searchOverlay1.style.display = "flex";
   }
 }
 
@@ -54,11 +54,11 @@ document
 // Event listener untuk menutup overlay ketika mengklik di luar kotak pencarian
 document.addEventListener("click", function (e) {
   if (
-    searchOverlay.style.display === "flex" &&
+    searchOverlay1.style.display === "flex" &&
     !searchBar.contains(e.target) &&
     !e.target.closest(".search-icon")
   ) {
-    searchOverlay.style.display = "none";
+    searchOverlay1.style.display = "none";
   }
 });
 
@@ -130,4 +130,49 @@ descriptionInput.addEventListener("keydown", function (event) {
 
 //dd
 
+// Menangani popup konfirmasi logout
+// const logoutBtn = document.getElementById('logout-btn');
+// const popup = document.getElementById('popup-confirm');
+// const cancelBtn = document.querySelector('.cancel-btn');
+// const logoutConfirmBtn = document.querySelector('.logout-btn');
 
+// Tampilkan popup saat tombol logout diklik
+// logoutBtn.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   popup.classList.remove('hidden');
+// });
+
+// Sembunyikan popup saat tombol batal diklik
+// cancelBtn.addEventListener('click', () => {
+//   popup.classList.add('hidden');
+// });
+
+// Tambahkan logika logout saat tombol Log Out diklik
+// logoutConfirmBtn.addEventListener('click', () => {
+//   alert('Anda telah keluar.');
+//   popup.classList.add('hidden');
+//   // Tambahkan logika logout lainnya di sini, misalnya redirect
+// });
+
+// File: script.js
+
+// Get references to elements
+const searchIcon = document.getElementById('searchIcon');
+const searchOverlay = document.getElementById('searchOverlay');
+const closeOverlay = document.getElementById('closeOverlay');
+
+// Toggle search overlay visibility
+function toggleSearchOverlay() {
+  searchOverlay.classList.toggle('active');
+}
+
+// Add event listeners
+searchIcon.addEventListener('click', toggleSearchOverlay);
+closeOverlay.addEventListener('click', toggleSearchOverlay);
+
+// Close overlay if clicked outside the search bar
+searchOverlay.addEventListener('click', (e) => {
+  if (!e.target.closest('.search-bar')) {
+    searchOverlay.classList.remove('active');
+  }
+});

@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="css/superAdminmember.css" />
   </head>
   <body>
+    
+
     <div class="container">
       <!-- Navbar -->
       <nav class="navbar">
@@ -59,12 +61,28 @@
             <a href="laporkan.html"><i data-feather="alert-circle"></i>Laporkan</a>
           </li>
           <li>
-            <a href="logout.html" class="logout"><i data-feather="log-out"></i>Keluar</a>
+            <!-- <a button class="search-icon"><i data-feather="log-out"></i>Keluar</button> -->
+            <a class="search-icon"><i data-feather="log-out"></i>Keluar</a>
           </li>
         </ul>
       </div>
     </div>
-    
+
+    <div id="searchOverlay1" class="search-overlay">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Ketik sesuatu...">
+        <button id="closeOverlay">✖ Tutup</button>
+      </div>
+    </div>
+
+    <!-- Popup Konfirmasi -->
+  <!-- <div id="popup-confirm" class="popup hidden">
+    <div class="popup-content">
+      <p>Apakah yakin keluar?</p>
+      <button class="cancel-btn">Batal</button>
+      <button class="logout-btn">Log Out</button>
+    </div>
+  </div> -->
 
     <!-- Member Table -->
     <div class="table-container">
@@ -121,20 +139,6 @@
     </div>
   </div>
 
-  <!-- <script>
-    // Ambil semua tautan menu
-    const menuLinks = document.querySelectorAll('.sidebar ul li a');
-    // Ambil URL halaman saat ini
-    const currentPage = window.location.pathname;
-
-    // Iterasi setiap tautan menu
-    menuLinks.forEach(link => {
-        // Cek jika href tautan sama dengan URL halaman saat ini
-        if (link.href.includes(currentPage)) {
-            link.classList.add('active'); // Tambahkan kelas active
-        }
-    });
-</script> -->
 
     <!-- Feather Icon -->
     <script>
