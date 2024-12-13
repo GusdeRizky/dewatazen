@@ -199,6 +199,22 @@ textarea {
   fill: none;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.item {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
 /* Submit Button Styling */
 .submit-button {
   display: block;
